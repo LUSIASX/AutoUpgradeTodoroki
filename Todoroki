@@ -1,0 +1,19 @@
+while _G.AutoUpgradeTodoroki do wait()
+if _G.AutoUpgradeTodoroki then
+
+local args = {
+    [1] = "Upgrade",
+    [2] = workspace.Unit:FindFirstChild("Enraged Todoroki")
+}
+
+game:GetService("ReplicatedStorage").Remotes.Input:FireServer(unpack(args))
+
+local args = {
+    [1] = "Upgradable",
+    [2] = workspace.Unit:FindFirstChild("Enraged Todoroki")
+}
+
+game:GetService("ReplicatedStorage").Remotes.Server:InvokeServer(unpack(args))
+
+end
+end
